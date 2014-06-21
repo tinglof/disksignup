@@ -1,3 +1,9 @@
+## Disk Signup
+
+Disk Signup is a project created in ordet to simplify signups in the student union DISK. 
+
+Author: Johan Tinglöf
+
 ## Laravel PHP Framework
 
 [![Build Status](https://travis-ci.org/laravel/framework.svg)](https://travis-ci.org/laravel/framework)
