@@ -16,5 +16,8 @@ Route::get('/', function()
 	return View::make('onepager');
 });
 
-Route::post('/login', 'AuthController@login');
-Route::get('/logout', 'AuthController@logout');
+Route::group(array('prefix' => 'service'), function() 
+{
+    Route::resource('authenticate', 'AuthenticationController');
+    Route::resource('events', 'AppointmentController');
+});

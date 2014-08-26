@@ -1,0 +1,123 @@
+<div class="row top-row">
+	<div class="col-md-6">
+		<h4 class="username-text">{{ username }}</h4>
+	</div>
+	<div class="col-md-6">
+		<a class="pull-right" ng-click="logout()">Sign out</a>
+	</div>
+	
+</div>
+
+<!--
+<table class="table table-striped">
+    <tr ng-repeat="event in events">
+        <td>
+            {{event.id}}
+        </td>
+        <td>
+            {{event.event_name }}
+        </td>
+        <td>
+            {{event.event_comment}}
+        </td>
+    </tr>
+</table>
+
+-->
+<div class="container">
+<form class="form-horizontal col-md-6" ng-submit="createEvent()">
+<!-- Form Name -->
+<h1 class="heading">Nytt Event <i class="fa fa-heart-o"></i></h1>
+
+<fieldset>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-3 control-label" for="name">Mötestitel</label>  
+  <div class="col-md-6">
+  <input ng-model="name" type="text" placeholder="ex. årsmöte" class="form-control input-md" required=""> 
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-3 control-label" for="comment">Kommentar</label>  
+  <div class="col-md-6">
+  <input ng-model="comment" type="text" placeholder="ex. ta med medlemskort" class="form-control input-md">   
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-3 control-label" for="date">Datum</label>  
+  <div class="col-md-6">
+  <input ng-model="date"type="text" placeholder="ex. 24/5" class="form-control input-md" required="">    
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-3 control-label" for="time">Tid</label>  
+  <div class="col-md-6">
+  <input ng-model="timeof" type="text" placeholder="ex. 18.00" class="form-control input-md" required="">    
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-3 control-label" for="location">Plats</label>  
+  <div class="col-md-6">
+  <input ng-model="location" type="text" placeholder="ex. sal 402" class="form-control input-md" required="">    
+  </div>
+</div>
+
+<!-- Button -->
+<div class="form-group">
+  <label class="col-md-3 control-label" for="singlebutton"></label>
+  <div class="col-md-4">
+    <button id="singlebutton" name="singlebutton" class="btn btn-primary">Skapa event</button>
+  </div>
+</div>
+</fieldset>
+</form>
+
+
+	<div class="col-md-4 col-md-offset-1">
+		<h1 class="heading">Mina Events <i class="fa fa-calendar-o"></i></h1>
+		<div class="input-group filter">
+			<div class="input-group-addon filter"><i class="fa fa-search"></i></div>
+			<input type="text" class="form-control input-md" placeholder="Sök möten" ng-model="search">
+		</div>
+		<accordion close-others="true">
+			<accordion-group is-open="status.open" ng-class="{'active': status.open}" ng-repeat="event in userEvents | filter:search">
+				<accordion-heading>
+		            {{ event.name }} - {{event.date}} <i class="pull-right fa" ng-class="{'fa-minus-circle': status.open, 'fa-plus-circle': !status.open}"></i>
+		        </accordion-heading>
+	      		<div class="row">
+					<div class="col-xs-6">
+						<b>Kommentar:</b><p> {{ event.comment }}</p>
+						<b>Datum:</b><p> {{ event.date }}</p>
+					</div>
+					<div class="col-xs-6">
+						<b>Tid:</b><p> {{ event.time }}</p>
+						<b>Plats:</b><p> {{ event.location }}</p>
+					</div>
+				</div>
+	    	</accordion-group>
+    	</accordion>
+	</div>
+
+
+
+</div>
+
+
+
+
+
+<!-- <div class="event-row" ng-repeat="event in userEvents">
+			<div class="row text-center">
+				<h4> {{ event.name }} </h4>
+			</div>
+			
+		</div> -->

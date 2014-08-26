@@ -1,0 +1,86 @@
+.loginpanel {
+	background: #eee;
+	padding: .7em 3em;
+	border-radius: 10px;
+	margin-top: 1em;
+}
+
+.heading {
+	margin-bottom: 1em;
+	text-align: center;
+}
+
+.top-row {
+	padding: 2em 0;
+	border-bottom: 1px solid #ccc;
+}
+
+.username-text {
+	margin-top: 5px;
+}
+
+/* Override for boostrap.ui */
+.nav, .pagination, .carousel, .panel-title a, a { 
+	cursor: pointer; 
+}
+
+/*Override for boostrap panel headings*/
+
+.panel-default > .panel-heading {
+	border-radius: 0;
+	background: rgba(0,0,0,0.045);
+	color: #444;
+}
+
+.panel-group .panel {
+	border-radius: 0;
+	border: 1px solid transparent;
+	box-shadow: none;
+}
+
+.form-control {
+	border-radius: 2px;
+}
+
+.panel-body {
+	box-shadow: 0 1px 1px rgba(0,0,0,.05);
+	-webkit-box-shadow: 0 1px 1px rgba(0,0,0,.05);
+	border: 1px solid #ddd;
+}
+
+.fa-plus-circle, .fa-minus-circle {
+	font-size: 20px;
+}
+
+.fa-plus-circle:hover {
+	color: #fe4641;
+}
+
+h1 .fa-heart-o, .fa-calendar-o {
+	/*color: #F7AAA6;*/
+	color: #fe4641;
+	margin-left: .2em;
+	transition: text-shadow 1.5s;
+}
+
+.active > .panel-heading {
+  background-color: #fe4641;
+  color: #fff;
+}
+
+h1 .fa-heart-o:hover {
+	text-shadow: 0 0 5px #fff,0 0 10px #fff,0 0 15px #fff, 
+	0 0 20px #E33100, 0 0 30px #E33100, 0 0 40px #E33100, 
+	0 0 50px #E33100, 0 0 60px #E33100;
+}
+
+.filter {
+	margin-bottom: 20px;
+}
+
+.input-group-addon {
+	/*background-color: #fe4641;*/
+	background-color: #FE6A66;
+	color: #fff;
+	border: 1px solid transparent;
+}
